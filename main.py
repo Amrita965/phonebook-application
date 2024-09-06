@@ -1,4 +1,10 @@
 
+import os
+
+def openFile():
+    if not os.path.exists("contacts.txt"):
+        f = open("contacts.txt", "x")
+
 def add_contact():
     name = input("\t\t\tEnter the name of the contact: ")
     phone = input("\t\t\tEnter the phone number: ")
@@ -60,10 +66,10 @@ def main_menu():
                 continue
 
             case 2:
-                view_all_contact()
                 continue
 
             case 3:
+                view_all_contact()
                 continue
 
             case 4:
@@ -75,5 +81,6 @@ def main_menu():
             case 6:
                 exit()
 
+openFile()
 main_menu()
 
